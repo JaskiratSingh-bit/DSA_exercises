@@ -41,6 +41,12 @@ https://github.com/prittt/fondamenti-ii
 │
 └── 02-Backtracking/
     ├── Backtracking_exercises
+|
+|---03-Greedy/
+    |---Greedy_exercises
+|
+|--04-Elemtype_ordinamneto
+   |--Elemtype_ordinamnto_exercises 
 ```
 
 Each folder focuses on a specific algorithmic technique and contains:
