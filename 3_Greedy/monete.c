@@ -12,9 +12,17 @@ extern int *Monete(const int *tagli, size_t tagli_size, int budget) {
         return NULL;
     }
 
+    int count = 0;
+    int tmp = budget;
     for (size_t i=0;i<tagli_size;i++) {
-        res[i] = budget/tagli[i];
-        budget = budget%tagli[i];
+       while((tmp/tagli[i]) >0) {
+           tmp = tmp-tagli[i];
+           count++;
+           budget = budget - tagli[i];
+       }
+        res[i] = count;
+        count =0;
+        tmp = budget;
     }
 
     return res;
@@ -29,6 +37,7 @@ int main(void) {
         printf("%d ",res[i]);
     }
     free(res);
+    printf("\n");
 
     return 0;
 }
