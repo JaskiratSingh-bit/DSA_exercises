@@ -10,7 +10,16 @@ documentazione delle funzioni a esso associate.
 #include <stdio.h>
 
 /** @brief Definizione di `struct ElemType`. */
-typedef int ElemType;
+typedef int ElemType1;
+struct Address {
+    char name[40];
+    char street[50];
+    int  number;
+    char city[30];
+    char province[3];
+    char postal_code[6];
+};
+typedef struct Address ElemType;
 
 /** @brief La funzione `ElemCompare()` confronta due elementi.
 

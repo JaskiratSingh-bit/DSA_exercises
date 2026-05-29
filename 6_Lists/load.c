@@ -12,7 +12,7 @@ Item *ListLoad(const char *filename) {
 
     Item *list = ListCreateEmpty();
 
-    int num = 0;
+    ElemType1 num = 0;
     while (fscanf(f,"%d",&num) != EOF) {
        list = ListInsertHead(&num,list);
     }
@@ -21,10 +21,11 @@ Item *ListLoad(const char *filename) {
     return list;
 }
 
-/*int main(void) {
+int main(void) {
 
     Item *list = ListLoad("data_00.txt");
     ListWriteStdout(list);
+    printf("\n");
 
     return 0;
-}*/
+}
